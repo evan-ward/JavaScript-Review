@@ -2,22 +2,42 @@ var threeItems = [1,2,3];
 //create a function named 'last' that returns the last object from 'threeItems'
 //alert the result of your function
 
-  //code here
+var last = function(){
+
+	return(threeItems[threeItems.length-1])
+}
 
 
 
 //Fix 'dicedArray' below so that it's an array full of integers from 0-10
 var dicedArray = [0,1,4,5,7,8,10];
 
-  //code here
-
-
+//dicedArray.splice(1,0,2,3)
+var order = function(array){
+	for (var i=0; i<array.length; i++){
+		if (i === array[array.length-1]){
+			break;
+		}
+		if (array[i+1] !== i + 1){
+			array.splice(i+1, 0, i+1);
+		} 
+	}
+console.log(array);
+};
 
 //Loop through evenArray removing all values that aren't even 
 //hint x % 2 --> checks for even numbers
 var evenArray = [1,2,3,6,22,98,45,23,22,12];
 
-  //code here
+var oddsOnly = function(array){
+	for (var i=0; i < array.length; i++){
+		if (array[i] % 2 !==0){
+			array.splice(i, 1);
+			i--;
+		}
+	}
+	console.log(array);
+}
 
 
 
